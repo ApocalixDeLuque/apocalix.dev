@@ -1,0 +1,22 @@
+
+//import colors and variables to use 
+@use './colors' as *
+@use './variables' as *
+
+//rewrite all default values for each element 🔽
+*
+    margin: 0
+    padding: 0
+    scroll-behavior: smooth
+    background-color: none
+    font-family: $font-family
+
+body::-webkit-scrollbar //hides scroll bar
+    display: none
+
+a
+    color: unset
+    text-decoration: none
+
+button
+    text-decoration: none
