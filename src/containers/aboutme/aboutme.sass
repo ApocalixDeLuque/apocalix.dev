@@ -1,0 +1,110 @@
+@use '../../styles/main.sass' as *
+
+.aboutme
+    &__container
+        display: flex
+        padding: 4rem 6.5rem
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        gap: 6.5rem
+        align-self: stretch
+        &-title
+            display: flex
+            flex-direction: column
+            align-items: flex-start
+            gap: 0.5rem
+            align-self: stretch
+            & h2
+                font-weight: 600
+                font-size: 4rem
+        &-list
+            display: flex
+            align-items: center
+            gap: 0.5rem
+            align-self: stretch
+            &_qualitys
+                display: flex
+                flex-direction: column
+                align-items: flex-start
+                gap: 1rem
+                flex: 1 0 0
+            &_secret
+                .textlist
+                    opacity: 0.2
+                    transition: opacity 0.2s ease-in-out
+                    flex-direction: row-reverse
+                    &:hover
+                        cursor: pointer
+                        opacity: 1
+                        transition: opacity 0.2s ease-in-out
+        & .textlist
+            display: flex
+            align-items: center
+            gap: 1rem
+            & img
+                display: flex
+                justify-content: center
+                align-items: center
+                width: 2rem
+                height: 2rem
+            & p
+                font-size: 2rem
+                transition: color 0.2s ease-in-out
+            &:nth-child(5)
+                & p
+                    text-decoration: line-through
+                    &:hover
+                        cursor: pointer
+                        text-decoration: none
+                        color: $red
+                        transition: color 0.2s ease-in-out
+    &__know
+        display: flex
+        padding: 7.5rem 0
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        gap: 7.5rem
+        align-self: stretch
+        padding: 20rem 0
+        &-section
+            display: flex
+            flex-direction: column
+            justify-content: center
+            align-items: center
+            width: 100%
+            gap: 3rem
+            & h2
+                font-weight: normal
+                font-size: 2.5rem
+            &_iconlist
+                display: flex
+                justify-content: center
+                align-items: center
+                gap: 1.5rem
+                padding: 0 6.5rem
+                align-self: stretch
+                & .iconlist
+                    display: flex
+                    flex-direction: column
+                    justify-content: center
+                    align-items: center
+                    gap: 0.5rem
+                    flex: 1 0 0
+                    transition: transform 0.2s ease-in-out
+                    & img
+                        display: flex
+                        justify-content: center
+                        align-items: center
+                        width: 6.25rem
+                        opacity: 0.5
+                    & p
+                        text-align: center
+                        font-size: 2rem
+                        transition: color 0.2s ease-in-out
+                    //augment size on hover
+                    &:hover
+                        cursor: pointer
+                        transform: scale(1.1)
+                        transition: transform 0.2s ease-in-out

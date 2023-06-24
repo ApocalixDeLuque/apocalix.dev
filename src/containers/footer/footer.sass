@@ -1,3 +1,70 @@
 @use '../../styles/main.sass' as *
 
-.footer
+.footer__container
+    display: flex
+    height: 200vh
+    align-items: center
+    justify-content: center
+    gap: 4.5rem
+    align-self: stretch
+    background: $dark
+    &__logo
+        display: flex
+        justify-content: center
+        align-items: center
+        gap: 0.75rem
+        align-self: stretch
+        & img
+            filter: invert(1)
+            width: 2.5rem
+        &-text
+            display: flex
+            justify-content: center
+            align-items: center
+            text-align: center
+            font-size: 2.5rem
+            font-weight: 600
+            color: $light
+            & p
+                color: $light
+    &__links
+        display: flex
+        align-items: flex-start
+        gap: 4.5rem
+        &-section
+            display: flex
+            flex-direction: column
+            align-items: flex-start
+            gap: 0.75rem
+            & h2
+                color: $light
+                font-size: 2.5rem
+                font-weight: 600
+            & p
+                color: $light-gray
+                font-size: 1.5rem
+                font-weight: 300
+                transition: color 0.2s ease-in-out
+
+
+
+.footer__container
+    &__logo
+        & img:hover
+            cursor: pointer
+        &-text:hover
+            cursor: pointer
+    &__links
+        &-section
+            & p:hover
+                color: $red
+                cursor: pointer
+                transition: color 0.2s ease-in-out
+
+
+/*
+
+    -webkit-user-select: none
+    -ms-user-select: none
+    user-select: none
+    */

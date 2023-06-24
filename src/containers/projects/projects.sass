@@ -1,0 +1,82 @@
+@use '../../styles/main.sass' as *
+
+.projects__container
+    display: flex
+    padding: 4rem 6.5rem
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    gap: 6.5rem
+    align-self: stretch
+    &-title
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+        gap: 0.5rem
+        align-self: stretch
+        & h2
+            font-weight: 600
+            font-size: 4rem
+    &-content
+        flex: 1
+        display: grid
+        grid-template-columns: repeat(2, 1fr)
+        grid-gap: 2rem
+        padding: 0 4rem
+        align-self: stretch
+        &_page
+            display: flex
+            padding: 2rem
+            flex-direction: column
+            align-items: flex-start
+            gap: 1rem
+            flex: 1 0 0
+            border-radius: 1.5rem
+            border: 1px solid $light-gray
+            & h2
+                font-size: 3rem
+                font-weight: normal
+            & img
+                -webkit-user-select: none
+                -ms-user-select: none
+                user-select: none
+                aspect-ratio: 16/9
+                width: 100%
+                border-radius: 0.5rem
+            &-buttons
+                display: flex
+                flex-direction: row
+                justify-content: center
+                align-items: center
+                gap: 0.5rem
+                .projects__button
+                    transition: background 0.2s ease-in-out
+                    display: flex
+                    justify-content: center
+                    align-items: center
+                    padding: 1rem 3rem
+                    gap: 1rem
+                    border-radius: 1.5rem
+                    background: $light-gray
+                    & img
+                        width: 2rem
+                        height: 2rem
+                        transition: filter 0.2s ease-in-out
+                    & p
+                        font-size: 2rem
+                        transition: color 0.2s ease-in-out
+
+.projects__container
+    &-content
+        &_page
+            &-buttons
+                .projects__button:hover
+                    cursor: pointer
+                    background: $red
+                    transition: background 0.2s ease-in-out
+                    & img
+                        filter: invert(1)
+                        transition: filter 0.2s ease-in-out
+                    & p
+                        color: $light
+                        transition: color 0.2s ease-in-out

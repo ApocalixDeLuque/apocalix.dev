@@ -1,33 +1,21 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-
+import * as React from "react";
+import { createRoot } from "react-dom/client";
+import { BrowserRouter,} from 'react-router-dom';
 import App from './App';
-import TemplatePage from "./pages/TemplatePage";
+import { ScrollToTop } from './components';
+//import smoothScrollPolyfill from 'smoothscroll-polyfill';
 //import reportWebVitals from './reportWebVitals';
-import {
-    createBrowserRouter,
-    RouterProvider,
-} from "react-router-dom";
 
+//smoothScrollPolyfill.polyfill();
 
-//
-const router = createBrowserRouter([
-    {
-        path: "/",
-        element: <App/>,
-    },
-    {
-        path: "/templatepage",
-        element: <TemplatePage/>,
-    },
-]);
+const root = createRoot(document.getElementById("root"));
 
-
-
-const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
     <React.StrictMode>
-        <RouterProvider router={router}/>
+        <BrowserRouter>
+            <ScrollToTop />
+            <App />
+        </BrowserRouter>
     </React.StrictMode>
 );
 
