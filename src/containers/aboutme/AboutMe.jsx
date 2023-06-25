@@ -6,7 +6,7 @@ import CustomTooltip from '../../components/customtooltip/CustomTooltip'
 
 
 
-const TextlList = ({ fontSize = "3", placement = "top", text, tooltipText}) => {
+const TextlList = ({ pageURL, fontSize = "3", placement = "top", text, tooltipText}) => {
     return (
       <CustomTooltip size={fontSize} followCursor placement={placement}
       title={
@@ -15,7 +15,7 @@ const TextlList = ({ fontSize = "3", placement = "top", text, tooltipText}) => {
         </React.Fragment>
       }
     >
-      <div className='textlist'>
+      <div className='textlist' onClick={() => {if(pageURL) window.open(pageURL, "_blank")}}>
         <img src={dbarrow} alt='arrow'></img>
         <p>{text}</p>
       </div>
@@ -49,7 +49,7 @@ const AboutMe = () => {
               <TextlList tooltipText="lived 8 years in usa!" text="english-spanish bilingual"/>
               <TextlList tooltipText="i love minecraft:)" text="first developed due to videogame passion"/>
               <TextlList tooltipText="self taught frontend/design" text="aim to become a fullstack dev"/>
-              <TextlList tooltipText="click to see my charts!" text="music lover"/>
+              <TextlList tooltipText="click to see my charts!" text="music lover" pageURL={"https://www.last.fm/es/user/ApocalixDeLuque"}/>
             </div>
             <div className='aboutme__container-list_secret'>
               <TextlList fontSize='2' placement="bottom" tooltipText="unimportant stuff" text="🤫"></TextlList>

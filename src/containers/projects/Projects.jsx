@@ -16,15 +16,15 @@ const Project = ({title, preview, pageURL, githubURL}) => {
             */}
             <img src={preview} alt='project'></img>
             <div className='projects__container-content_page-buttons'>
-                <div className='projects__button'>
+                <div className='projects__button' onClick={() => window.open(pageURL, "_blank")}>
                     <img src={webpage} alt='webpage'></img> 
                     {/* TODO add link to pageURL */}
                     <p>see live</p>
                 </div>
-                <div className='projects__button'>
+                <div className='projects__button' onClick={() => window.open(githubURL, "_blank")}>
                     <img src={github} alt='github'></img>
                     {/* TODO add link to githubURL */}
-                    <p>github</p> 
+                    <p>github</p>
                 </div>
             </div>
         </div>
@@ -38,10 +38,10 @@ const Projects = () => {
             <h2>projects 💻</h2>
         </div>
         <div className='projects__container-content'>
-            <Project title="arteneural" preview={page1}/>
-            <Project title="portfolio" preview={page2}/>
-            <Project title="image gallery" preview={page3}/>
-            <Project title="login system" preview={page4}/>
+            <Project pageURL={"https://arteneural.vercel.app/"} githubURL={"https://github.com/ApocalixDeLuque/arteneural"} title="arteneural" preview={page3}/>
+            <Project pageURL={"https://apocalix-dev.vercel.app/"} githubURL={"https://github.com/ApocalixDeLuque/apocalix.dev"} title="portfolio" preview={page2}/>
+            <Project pageURL={"https://arteneural.vercel.app/"} githubURL={"https://github.com/ApocalixDeLuque/react-testing"} title="image gallery" preview={page1}/>
+            <Project pageURL={"https://login-system123.vercel.app/"} githubURL={"https://github.com/ApocalixDeLuque/react-testing"} title="login system" preview={page4}/>
         </div>
     </div>
   )

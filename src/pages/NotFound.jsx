@@ -17,12 +17,12 @@ export default function NotFound () {
     return () => {
       clearInterval(timer)
     }
-  }, [])
+  }, [navigate])
 
   return (
     <div>
       <h2>404</h2>
-      <h2>redirecting in {count}...</h2>
+      <h2>redirecting... in {count}</h2>
     </div>
   );
 }

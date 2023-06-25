@@ -33,6 +33,7 @@
             flex: 1 0 0
             border-radius: 1.5rem
             border: 1px solid $light-gray
+            transition: transform 0.2s ease-in-out
             & h2
                 font-size: 3rem
                 font-weight: normal
@@ -43,6 +44,7 @@
                 aspect-ratio: 16/9
                 width: 100%
                 border-radius: 0.5rem
+                transition: filter 0.2s ease-in-out
             &-buttons
                 display: flex
                 flex-direction: row
@@ -65,6 +67,7 @@
                     & p
                         font-size: 2rem
                         transition: color 0.2s ease-in-out
+        
 
 .projects__container
     &-content
@@ -80,3 +83,11 @@
                     & p
                         color: $light
                         transition: color 0.2s ease-in-out
+            &:hover
+                transform: scale(1.02)
+                transition: transform 0.2s ease-in-out
+            & img
+                &:hover
+                    cursor: pointer
+                    filter: brightness(0.5)
+                    transition: filter 0.2s ease-in-out
