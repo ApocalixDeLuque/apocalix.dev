@@ -14,7 +14,6 @@ const App = () => {
         <Route path="/es" caseSensitive={false} element={<AboutMe/>} />
         <Route path="/home" caseSensitive={false} element={<Header/>} />
         <Route path="*" caseSensitive={false} element={<NotFound/>} />
-        
       </Routes>
       <Footer/>
     </div>

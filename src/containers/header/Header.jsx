@@ -1,12 +1,12 @@
 import React from 'react';
 import './header.sass';
 import programmer from "../../assets/programmer.svg";
-import bg from "../../assets/bg.jpeg";
+//import bg from "../../assets/bg.png";
 
 const Header = () => {
   return (
     <div className='header__container'>
-      <img className='bg' src={bg} alt='background'></img>
+      {/*<img className='bg' src={bg} alt='background'></img>*/}
       <div className='header__container-content'>
         <div className='header__container-content-info'>
 
@@ -16,7 +16,9 @@ const Header = () => {
           </div>
 
           <div className='header__container-content-info_button'>
-            <div className='button'>about me</div>
+            <div className='button'>
+              <p>about me</p>
+            </div>
           </div>
 
         </div>

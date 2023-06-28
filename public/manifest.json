@@ -1,9 +1,9 @@
 {
-  "short_name": "Template App",
-  "name": "Use this template for a new react app",
+  "short_name": "apocalix.dev",
+  "name": "apocalix.dev | blog",
   "icons": [
     {
-      "src": "YOURLOGO.png",
+      "src": "logo64.png",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
     },
