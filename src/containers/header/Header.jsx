@@ -3,9 +3,9 @@ import './header.sass';
 import programmer from "../../assets/programmer.svg";
 //import bg from "../../assets/bg.png";
 
-const Header = () => {
+const Header = React.forwardRef((props, ref) => {
   return (
-    <div className='header__container'>
+    <div className='header__container' id={props.id} ref={ref}>
       {/*<img className='bg' src={bg} alt='background'></img>*/}
       <div className='header__container-content'>
         <div className='header__container-content-info'>
@@ -29,6 +29,6 @@ const Header = () => {
       </div>
     </div>
   )
-}
+});
 
 export default Header

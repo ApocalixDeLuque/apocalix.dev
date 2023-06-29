@@ -31,9 +31,9 @@ const Project = ({title, preview, pageURL, githubURL}) => {
     )
 }
 
-const Projects = () => {
+const Projects = React.forwardRef((props, ref) => {
   return (
-    <div className='projects__container'>
+    <div className='projects__container' id={props.id} ref={ref}>
         <div className='projects__container-title'>
             <h2>projects 💻</h2>
         </div>
@@ -45,6 +45,6 @@ const Projects = () => {
         </div>
     </div>
   )
-}
+});
 
 export default Projects
