@@ -5,6 +5,7 @@
 
 //rewrite all default values for each element 🔽
 *
+    box-sizing: border-box
     margin: 0
     padding: 0
     scroll-behavior: smooth
@@ -12,11 +13,9 @@
     font-family: $font-family
     color: $dark
 
-html
-    font-size: 16px
-
-body::-webkit-scrollbar //hides scroll bar
-    display: none
+body
+    //&::-webkit-scrollbar //hides scroll bar
+        //display: none
 
 a
     color: unset

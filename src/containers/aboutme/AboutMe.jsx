@@ -36,9 +36,9 @@ const IconList = ({ icon, text, opacity = "0.5" }) => {
 
 
 
-const AboutMe = () => {
+const AboutMe = React.forwardRef((props, ref) => {
   return (
-    <div className='aboutme'>
+    <div className='aboutme' id={props.id} ref={ref}>
       <div className='aboutme__container'>
           <div className='aboutme__container-title'>
               <h2>about me 🧐</h2>
@@ -73,7 +73,7 @@ const AboutMe = () => {
         </div>
 
         <div className='aboutme__know-section'>
-          <h2>software / librarys:</h2>
+          <h2>software / libraries:</h2>
           <div>
           </div>
           <div className='aboutme__know-section_iconlist'>
@@ -100,6 +100,6 @@ const AboutMe = () => {
       </div>
     </div>
   )
-}
+});
 
 export default AboutMe
